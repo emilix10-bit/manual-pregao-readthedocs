@@ -1,106 +1,258 @@
 /* 1. Destrava a largura máxima do contêiner principal do Read the Docs */
 .wy-nav-content {
-    max-width: none !important; /* Remove a trava de 800px da página */
-    width: 100% !important;
+ max-width: none !important; /* Remove a trava de 800px da página */
+ width: 100% !important;
 }
 
 /* 2. Remove o limite de largura do bloco de texto interno */
 .rst-content {
-    max-width: none !important;
+ max-width: none !important;
 }
 
 /* 3. Garante que as imagens ocupem uma porcentagem % da largura total com borda elegante */
 .rst-content img, .md-content img {
-    width: 75% !important;
-    max-width: 75% !important;
-    height: auto !important;
-    display: block;
-    margin: 28px auto !important;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+ width: 100% !important;
+ max-width: 100% !important;
+ height: auto !important;
+ display: block;
+ margin: 28px auto !important;
+ border: 1px solid #d1d5db;
+ border-radius: 8px;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 /* --- ESTILOS DO POPUP/LIGHTBOX --- */
 
 /* 1. Prepara a imagem original no texto */
 .rst-content img, .md-content img {
-    cursor: zoom-in; /* Transforma o mouse em uma lupa ao passar por cima */
-    transition: transform 0.2s ease; /* Efeito suave ao passar o mouse */
+ cursor: zoom-in; /* Transforma o mouse em uma lupa ao passar por cima */
+ transition: transform 0.2s ease; /* Efeito suave ao passar o mouse */
 }
 
 .rst-content img:hover {
-    transform: scale(1.01); /* Micro-zoom no hover para indicar que é clicável */
+ transform: scale(1.01); /* Micro-zoom no hover para indicar que é clicável */
 }
 
 /* 2. O contêiner do Popup (a camada escura de fundo) */
 #lightbox-overlay {
-    display: none; /* Começa escondido */
-    position: fixed;
-    z-index: 9999; /* Fica em cima de tudo (menu, cabeçalho) */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.85); /* Fundo preto 85% transparente */
-    cursor: zoom-out; /* Mouse vira 'lupa de menos' para fechar ao clicar no fundo */
-    opacity: 0;
-    transition: opacity 0.3s ease; /* Animação de esmaecer */
+ display: none; /* Começa escondido */
+ position: fixed;
+ z-index: 9999; /* Fica em cima de tudo (menu, cabeçalho) */
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0, 0, 0, 0.85); /* Fundo preto 85% transparente */
+ cursor: zoom-out; /* Mouse vira 'lupa de menos' para fechar ao clicar no fundo */
+ opacity: 0;
+ transition: opacity 0.3s ease; /* Animação de esmaecer */
 }
 
 /* Quando o popup estiver ativo */
 #lightbox-overlay.active {
-    display: flex; /* Exibe e alinha a imagem no centro */
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
+ display: flex; /* Exibe e alinha a imagem no centro */
+ justify-content: center;
+ align-items: center;
+ opacity: 1;
 }
 
 /* 3. A imagem dentro do popup */
 #lightbox-image {
-    max-width: 90%; /* Ocupa no máximo 90% da largura da tela */
-    max-height: 90%; /* Ocupa no máximo 90% da altura da tela */
-    border: 4px solid white;
-    border-radius: 4px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-    cursor: default; /* Mouse normal em cima da imagem */
-    transform: scale(0.9);
-    transition: transform 0.3s ease;
+ max-width: 90%; /* Ocupa no máximo 90% da largura da tela */
+ max-height: 90%; /* Ocupa no máximo 90% da altura da tela */
+ border: 4px solid white;
+ border-radius: 4px;
+ box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+ cursor: default; /* Mouse normal em cima da imagem */
+ transform: scale(0.9);
+ transition: transform 0.3s ease;
 }
 
 /* Animação da imagem crescendo ao abrir */
 #lightbox-overlay.active #lightbox-image {
-    transform: scale(1);
+ transform: scale(1);
 }
 
 /* 4. O botão de fechar (X) */
 #lightbox-close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: white;
-    font-size: 50px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.2s;
-    user-select: none;
+ position: absolute;
+ top: 20px;
+ right: 30px;
+ color: white;
+ font-size: 50px;
+ font-weight: bold;
+ cursor: pointer;
+ transition: 0.2s;
+ user-select: none;
 }
 
 #lightbox-close:hover {
-    color: #ccc;
-    transform: scale(1.1);
+ color: #ccc;
+ transform: scale(1.1);
 }
 
 /* Permite a quebra de linha para os títulos (texto azul) e links longos no menu lateral */
 .wy-menu-vertical p.caption,
 .wy-menu-vertical span.caption-text,
 .wy-menu-vertical a {
-    white-space: normal !important;
-    word-wrap: break-word !important;
-    line-height: 1.4 !important;
+ white-space: normal !important;
+ word-wrap: break-word !important;
+ line-height: 1.4 !important;
 }
 
 /* Dá um pequeno respiro (margem) abaixo dos títulos em azul para não ficar colado nos links */
 .wy-menu-vertical p.caption {
-    margin-bottom: 8px !important;
+ margin-bottom: 8px !important;
 }
+```[cite: 3]
+
+---
+
+### 3. `docs/js/custom.js` (dentro da pasta `docs/js`)
+Substitua o conteúdo do arquivo `custom.js` por este[cite: 4, 9]:
+
+```javascript
+/* === NOVO CÓDIGO JavaScript PARA O POPUP (docs/js/custom.js) === */
+
+document.addEventListener('DOMContentLoaded', function() {
+ console.log("Script de popup carregado!"); // Mensagem de teste para o console do navegador
+
+ // 1. Criar a estrutura HTML do Popup e inserir no final da página
+ const lightboxHTML = `
+ <div id="lightbox-overlay" style="display: none; position: fixed; z-index: 99999; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); cursor: pointer; opacity: 0; transition: opacity 0.3s ease; justify-content: center; align-items: center;">
+ <span id="lightbox-close" style="position: absolute; top: 20px; right: 30px; color: white; font-size: 50px; font-weight: bold; cursor: pointer; user-select: none;" title="Fechar (Esc)">&times;</span>
+ <img id="lightbox-image" src="" alt="Imagem ampliada" style="max-width: 90%; max-height: 90%; border: 3px solid white; border-radius: 4px; box-shadow: 0 0 30px rgba(0, 0, 0, 0.6); transform: scale(0.9); transition: transform 0.3s ease;">
+ </div>
+ `;
+ document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+
+ // 2. Selecionar os elementos do popup
+ const overlay = document.getElementById('lightbox-overlay');
+ const lightboxImg = document.getElementById('lightbox-image');
+ const closeBtn = document.getElementById('lightbox-close');
+
+ // 3. SELETOR MAIS ROBUSTO: Seleciona TODAS as imagens dentro da área de conteúdo principal
+ // Isso é o que provavelmente estava falhando antes.
+ const images = document.querySelectorAll('.md-content img, .rst-content img, article img');
+ console.log("Imagens encontradas:", images.length); // Teste
+
+ // 4. Adicionar o evento de clique em cada imagem
+ images.forEach(image => {
+ image.style.cursor = 'zoom-in'; // Força o cursor de lupa
+ image.setAttribute('title', 'Clique para ampliar'); // Dica visual
+
+ image.addEventListener('click', function(e) {
+ e.preventDefault(); // Impede comportamentos padrão
+ console.log("Imagem clicada:", this.src); // Teste
+
+ lightboxImg.src = this.src; // Define a imagem grande
+ lightboxImg.alt = this.getAttribute('alt') || 'Imagem ampliada'; // Mantém acessibilidade
+
+ // Mostra o popup
+ overlay.style.display = 'flex';
+ 
+// Pequeno delay para a animação de opacidade funcionar
+ setTimeout(() => {
+ overlay.style.opacity = '1';
+ lightboxImg.style.transform = 'scale(1)';
+ }, 10);
+
+ // Impede o scroll do texto de fundo
+ document.body.style.overflow = 'hidden'; 
+});
+ });
+
+ // 5. Função para fechar o popup
+ function closeLightbox() {
+ overlay.style.opacity = '0';
+ lightboxImg.style.transform = 'scale(0.9)';
+ 
+// Espera a animação acabar para esconder de fato
+ setTimeout(() => {
+ overlay.style.display = 'none';
+ lightboxImg.src = ''; // Limpa a imagem para não piscar na próxima abertura
+ document.body.style.overflow = ''; // Reativa o scroll do texto
+ }, 300);
+ }
+
+ // Eventos de fechamento
+ closeBtn.addEventListener('click', closeLightbox); // Clicar no X
+ 
+// Clicar em qualquer lugar do fundo escuro (mas não na imagem)
+ overlay.addEventListener('click', function(e) {
+ if (e.target !== lightboxImg) { 
+closeLightbox();
+ }
+ });
+
+ // Apertar a tecla ESC
+ document.addEventListener('keydown', function(e) {
+ if (e.key === 'Escape' && overlay.style.display === 'flex') {
+ closeLightbox();
+ }
+ });
+});
+```[cite: 4]
+
+---
+
+### 4. `docs/js/font-size.js` (criar dentro da pasta `docs/js`)
+Crie o arquivo `font-size.js` dentro da pasta `docs/js` com este código[cite: 6, 9]:
+
+```javascript
+console.log("Script de fonte carregado com sucesso!");
+
+let currentFontSize = 16;
+try {
+ currentFontSize = parseFloat(localStorage.getItem('userFontSize')) || 16;
+} catch (e) {}
+
+window.aplicarFonte = function() {
+ let styleTag = document.getElementById('dynamic-font-style');
+ if (!styleTag) {
+ styleTag = document.createElement('style');
+ styleTag.id = 'dynamic-font-style';
+ document.head.appendChild(styleTag);
+ }
+ 
+styleTag.innerHTML = `
+ .wy-nav-content, .rst-content, article, p, li, td, th, span, a {
+ font-size: ${currentFontSize}px !important;
+ line-height: 1.6 !important;
+ }
+ `;
+ 
+try {
+ localStorage.setItem('userFontSize', currentFontSize);
+ } catch (e) {}
+};
+
+window.aumentarFonte = function() {
+ console.log("Botão A+ clicado!");
+ if (currentFontSize < 24) {
+ currentFontSize += 2;
+ window.aplicarFonte();
+ }
+};
+
+window.diminuirFonte = function() {
+ console.log("Botão A- clicado!");
+ if (currentFontSize > 12) {
+ currentFontSize -= 2;
+ window.aplicarFonte();
+ }
+};
+
+window.resetarFonte = function() {
+ console.log("Botão A (Reset) clicado!");
+ currentFontSize = 16;
+ window.aplicarFonte();
+};
+
+// Aplica a fonte assim que a página terminar de carregar
+if (document.readyState === "loading") {
+ document.addEventListener("DOMContentLoaded", window.aplicarFonte);
+} else {
+ window.aplicarFonte();
+}
+```[cite: 6]
