@@ -6,7 +6,7 @@ theme:
 markdown_extensions:
   - md_in_html
   - admonition
-  
+
 nav:
   - Início: index.md
   - Primeira etapa - criar uma contratação no sistema:
@@ -24,6 +24,8 @@ nav:
 # Configuração dos estilos e scripts customizados
 extra_css:
   - custom.css
+  - css/extra.css
 
 extra_javascript:
   - js/custom.js
+  - js/font-size.js
