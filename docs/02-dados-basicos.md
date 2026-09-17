@@ -1,11 +1,15 @@
-<div style="text-align: right; margin: 15px 0;">
-  <button onclick="window.print()" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
-    🖨️ Imprimir esta página
+<div style="display: flex; justify-content: flex-end; align-items: center; gap: 8px; margin: 10px 0;">
+  <span style="font-size: 14px; color: #555; font-weight: bold;">Tamanho do texto:</span>
+  <button onclick="diminuirFonte()" title="Diminuir texto" style="padding: 6px 12px; font-weight: bold; cursor: pointer; border: 1px solid #ccc; border-radius: 4px; background: #f8f9fa;">A-</button>
+  <button onclick="resetarFonte()" title="Tamanho normal" style="padding: 6px 12px; font-weight: bold; cursor: pointer; border: 1px solid #ccc; border-radius: 4px; background: #f8f9fa;">A</button>
+  <button onclick="aumentarFonte()" title="Aumentar texto" style="padding: 6px 12px; font-weight: bold; cursor: pointer; border: 1px solid #ccc; border-radius: 4px; background: #f8f9fa;">A+</button>
+  
+  <button onclick="window.print()" style="background-color: #0056b3; color: white; padding: 6px 16px; border: none; border-radius: 5px; font-size: 14px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.2); margin-left: 10px;">
+    🖨️ Imprimir ou baixar esta página
   </button>
 </div>
 
-
-# Preenchimento de dados da contratação
+# PREENCHIMENTO DE DADOS DA CONTRATAÇÃO
 
 **Passo 6:** Encontre a contratação desejada na aba **Contratações Minhas Uasg** e clique em “Editar”.
 
@@ -14,11 +18,11 @@
 ---
 
 **Passo 7:** Na aba **Dados Básicos da Contratação**, preencha o número do processo, o número de controle interno da UASG e, no **Tipo de contratação**, escolha a modalidade de licitação.
-![Imagem das datas estimadas](Imagens/07-Modalidade.png)
 
-<div style="background-color: #e8f4f8; border-left: 5px solid #0275d8; padding: 12px 15px; margin: 15px 0; border-radius: 4px; color: #004085;">
-  <strong>OBSERVAÇÃO:</strong> O número de controle interno da UASG tem por objetivo permitir que cada órgão tenha seu controle de processos, registrado no sistema para melhor rastreabilidade. O preenchimento desse número é opcional.
-</div>
+![Tela 07](Imagens/07-Modalidade.png)
+
+!!! note "Nota"
+    O número de controle interno da UASG tem por objetivo permitir que cada órgão tenha seu controle de processos, registrado no sistema para melhor rastreabilidade. O preenchimento desse número é opcional.
 
 ---
 
@@ -52,11 +56,9 @@ Os modos de disputa exibidos em tela variam de acordo com a modalidade da licita
 
 ![Tela 12](Imagens/12-forma-de-realizacao.png)
 
-<div style="background-color: #e8f4f8; border-left: 5px solid #0275d8; padding: 12px 15px; margin: 15px 0; border-radius: 4px; color: #004085;">
-  <strong>OBSERVAÇÃO:</strong> 
-  <br> - A opção <strong>Eletrônico</strong> encaminhará seu processo para a sala de disputa virtual, onde fornecedores interessados se conectarão ao seu processo de forma virtual.
-  <br> - A opção <strong>Presencial</strong> resultará na realização de sessão pública presencial e no posterior registro de resultados.
-</div>
+!!! note "Nota"
+    - A opção **Eletrônico** encaminhará seu processo para a sala de disputa virtual, onde fornecedores interessados se conectarão ao seu processo de forma virtual.
+    - A opção **Presencial** resultará na realização de sessão pública presencial e no posterior registro de resultados.
 
 ---
 
@@ -77,9 +79,8 @@ Os modos de disputa exibidos em tela variam de acordo com a modalidade da licita
 ![Tela 15](Imagens/15-dados-da-contratacao.png)
 
 <br>
-<div style="text-align: right; margin: 15px 0;">
+<div style="text-align: right; margin: 10px 0;">
   <button onclick="window.print()" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
-    🖨️ Imprimir esta página
+    🖨️ Imprimir ou baixar esta página
   </button>
 </div>
-
