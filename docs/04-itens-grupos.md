@@ -1,10 +1,15 @@
-<div style="text-align: right; margin: 10px 0;">
-  <button onclick="window.print()" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
-    🖨️ Imprimir esta página
+<div style="display: flex; justify-content: flex-end; align-items: center; gap: 8px; margin: 10px 0;">
+  <span style="font-size: 14px; color: #555; font-weight: bold;">Tamanho do texto:</span>
+  <button onclick="diminuirFonte()" title="Diminuir texto" style="padding: 6px 12px; font-weight: bold; cursor: pointer; border: 1px solid #ccc; border-radius: 4px; background: #f8f9fa;">A-</button>
+  <button onclick="resetarFonte()" title="Tamanho normal" style="padding: 6px 12px; font-weight: bold; cursor: pointer; border: 1px solid #ccc; border-radius: 4px; background: #f8f9fa;">A</button>
+  <button onclick="aumentarFonte()" title="Aumentar texto" style="padding: 6px 12px; font-weight: bold; cursor: pointer; border: 1px solid #ccc; border-radius: 4px; background: #f8f9fa;">A+</button>
+  
+  <button onclick="window.print()" style="background-color: #0056b3; color: white; padding: 6px 16px; border: none; border-radius: 5px; font-size: 14px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.2); margin-left: 10px;">
+    🖨️ Imprimir ou baixar esta página
   </button>
 </div>
 
-# Inclusão e Configuração de Itens
+# INCLUSÃO E CONFIGURAÇÃO DE ITENS
 
 Existem duas formas de incluir itens na sua contratação: diretamente pelo **Catálogo integrado** ou por meio do upload de uma **Planilha Eletrônica**.
 
@@ -29,13 +34,8 @@ Existem duas formas de incluir itens na sua contratação: diretamente pelo **Ca
 
 ![Salvar unidade e valor unitário](Imagens/22-Inclusao-de-itens-Catalogo.png)
 
-<br>
-
-<div style="display: block; background-color: #e2f0d9; border-left: 5px solid #388e3c; padding: 12px 15px; margin: 15px 0; border-radius: 4px; color: #1e4620;">
-  <strong>NOTA:</strong> Repita os passos 18 a 21 para todos os itens de sua contratação.
-</div>
-
-<br>
+!!! note "Nota"
+    Repita os passos 18 a 21 para todos os itens de sua contratação.
 
 **Passo 22:** Depois de inseridos todos os itens, clique no carrinho localizado no canto superior direito.
 
@@ -61,13 +61,8 @@ Siga os passos abaixo para adicionar itens usando uma planilha eletrônica.
 
 ![Upload de itens por planilha](Imagens/26-Inclusao-de-itens-Planilha.png)
 
-<br>
-
-<div style="display: block; background-color: #fff3cd; border-left: 5px solid #ffc107; padding: 12px 15px; margin: 15px 0; border-radius: 4px; color: #856404;">
-  <strong>ATENÇÃO:</strong> O sistema apresentará um link com modelo de planilha para ser seguido. É importante que esse modelo seja seguido para a correta importação dos itens.
-</div>
-
-<br>
+!!! warning "Atenção"
+    O sistema apresentará um link com modelo de planilha para ser seguido. É importante que esse modelo seja seguido para a correta importação dos itens.
 
 ![Modelo de planilha de itens](Imagens/27-Inclusao-de-itens-Planilha.png)
 
@@ -123,23 +118,13 @@ O relatório apresentado indicará os possíveis erros no carregamento de dados.
 
 ![Quantidade e local de entrega](Imagens/40-Configuracao-de-item.png)
 
-<br>
-
-<div style="background-color: #e8f4f8; border-left: 5px solid #0275d8; padding: 12px 15px; margin: 15px 0; border-radius: 4px; color: #004085;">
-  <strong>OBSERVAÇÃO:</strong> Pode ser incluído mais de um (1) local de entrega.
-</div>
-
-<br>
+!!! note "Nota"
+    Pode ser incluído mais de um (1) local de entrega.
 
 ![Múltiplos locais de entrega](Imagens/40-1-adicionar-mais-locais-de-entrega.png)
 
-<br>
-
-<div style="background-color: #fff3cd; border-left: 5px solid #ffc107; padding: 12px 15px; margin: 15px 0; border-radius: 4px; color: #856404;">
-  <strong>ATENÇÃO:</strong> Você também poderá atribuir um local de entrega a vários itens simultaneamente.
-</div>
-
-<br>
+!!! warning "Atenção"
+    Você também poderá atribuir um local de entrega a vários itens simultaneamente.
 
 **Passo 34:** Para isso, na página inicial dos itens da contratação, selecione os itens que têm o mesmo endereço de entrega, clicando na caixa ao lado da descrição dos itens e clique em “Adicionar Locais de Entrega”.
 
@@ -184,13 +169,8 @@ Selecionando a opção de **Benefício Cota Reservada**, o item em edição ser�
 
 ![Benefício Cota Reservada](Imagens/75-beneficios-da-compra.png)
 
-<br>
-
-<div style="background-color: #fff3cd; border-left: 5px solid #ffc107; padding: 12px 15px; margin: 15px 0; border-radius: 4px; color: #856404;">
-  <strong>ATENÇÃO:</strong> O item de cota reservada preservará as características do item principal, então revise as informações antes de salvar.
-</div>
-
-<br>
+!!! warning "Atenção"
+    O item de cota reservada preservará as características do item principal, então revise as informações antes de salvar.
 
 Para definir o quantitativo de cada uma das cotas, retorne para a aba “Locais de Entrega”.
 
@@ -223,11 +203,8 @@ Para a aplicação da exigência de conteúdo nacional, selecione a opção em t
 
 ---
 
-<div style="background-color: #e2f0d9; border-left: 5px solid #388e3c; padding: 12px 15px; margin: 15px 0; border-radius: 4px; color: #1e4620;">
-  <strong>NOTA:</strong> Repita os passos acima para todos os itens de sua contratação.
-</div>
-
-<br>
+!!! note "Nota"
+    Repita os passos acima para todos os itens de sua contratação.
 
 ## Formação de Grupos de Itens
 
@@ -252,8 +229,9 @@ Para a aplicação da exigência de conteúdo nacional, selecione a opção em t
 
 ![Configuração final do grupo](Imagens/52-Acoes-em-lote-grupo-Configuracao-final.png)
 
-<div style="text-align: right; margin: 20px 0;">
+<br>
+<div style="text-align: right; margin: 10px 0;">
   <button onclick="window.print()" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
-    🖨️ Imprimir esta página
+    🖨️ Imprimir ou baixar esta página
   </button>
 </div>
