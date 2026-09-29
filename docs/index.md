@@ -37,9 +37,7 @@ Você pode acessar as etapas específicas que quer consultar ou ver o manual com
   * [6. Responsáveis](06-responsaveis.md)
   * [7. Divulgando](07-divulgando.md)
   * [8. Segunda etapa - Abertura](segunda-etapa-abertura.md)
-
-* **Página única:**
-  * [Manual completo: todo o manual na mesma página](versao-impressao.md)
+* [Manual completo: todo o manual na mesma página](versao-impressao.md)
 
 <div style="text-align: right; margin: 20px 0;">
   <button onclick="window.print()" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
